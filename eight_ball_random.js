@@ -1,3 +1,10 @@
+/*
+This file was a tutorial on control flow and creating a quick and simple randomizer to inject into a control flow 
+to act as an 8-ball when asked a question. This lesson also helped me build fluency with ternary operations and template literals
+for more readable code when using console.log()
+*/
+
+
 let userName = 'Jordan';
 
 // Used ternary method to check truthy/falsey on userName
