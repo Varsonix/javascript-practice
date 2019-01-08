@@ -169,3 +169,28 @@ const truthyOrFalsy = (value) => {
 */
 console.log(truthyOrFalsy(0)); // Should print false
 console.log(truthyOrFalsy('Hello!')); // Should print true
+
+/*
+Exercise 10: Create a function that calculates (based on how many friends you have) how many of them are imaginary. 
+Imaginary friends are always 33% of their real friends.
+*/
+
+// 3 Different ways.
+
+// Ultra concise
+const numImaginaryFriends = friends => Math.round(0.33 * friends);
+
+/*
+const numImaginaryFriends = (friends) => {
+  return Math.round(0.33 * friends);
+}*/
+
+/* Ridiculously fat code
+var numImaginaryFriends = function(friends) {
+  const imagine = 0.33
+  let finalNumber = Math.round(imagine * friends);
+  return finalNumber;
+}*/
+
+// Uncomment the line below when you're ready to try out your function
+console.log(numImaginaryFriends(18)) // Should print 6
