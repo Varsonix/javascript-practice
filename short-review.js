@@ -30,3 +30,29 @@ const agreeOrDisagree = (string1, string2) => {
 }
 
 console.log(agreeOrDisagree('yes', 'yes'));
+
+/*
+
+Exercise 3: Create a function that takes your age and returns a classification based on your age range (e.g: 0-3 = baby / 4-12 = child)
+
+*/
+
+const lifePhase = (age) => {
+  if (age < 0 || age > 140){
+    return 'This is not a valid age';
+  }
+  
+  if (age <= 3){
+    return 'baby';
+  }	else if (age <= 12){
+    return 'child';
+  }	else if (age <= 19){
+    return 'teen';
+  }	else if (age <= 64){
+    return 'adult';
+  }	else if (age <= 140){
+    return 'senior citizen';
+  }
+}
+
+console.log(lifePhase(5); // Should print 'Child'
