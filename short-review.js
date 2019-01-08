@@ -194,3 +194,26 @@ var numImaginaryFriends = function(friends) {
 
 // Uncomment the line below when you're ready to try out your function
 console.log(numImaginaryFriends(18)) // Should print 6
+
+/*
+
+Exercise 11: Write a function that takes 3 strings and creates a quick adlib.
+
+*/
+// Concise
+const sillySentence = (adj, verb, noun) => `I am so ${adj} because I ${verb} coding! Time to write some more awesome ${noun}!`;
+
+/* Standard
+const sillySentence = (adj, verb, noun) => {
+  return `I am so ${adj} because I ${verb} coding! Time to write some more awesome ${noun}!`;
+}*/
+
+/* Fat code
+var sillySentence = function(adj, verb, noun) {
+  let word1 = adj;
+  let word2 = verb;
+  let word3 = noun;
+  
+  return 'I am so ' + word1 + ' because I ' + word2 + ' coding! Time to write some more awesome ' + word3 +'!';
+} */
+console.log(sillySentence('excited', 'love', 'functions')) 
