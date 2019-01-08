@@ -150,3 +150,22 @@ const calculateWeight = (earthWeight, planet) => {
 */
 console.log(calculateWeight(100, 'Jupiter')) // Should print 236
 
+/*
+
+Exercise 9: Truty or falsy. Create a function that quickly checks if a given parameter is truty or falsy
+
+*/
+const truthyOrFalsy = value => value ? true : false;
+
+/* Original function, before condensing.
+
+const truthyOrFalsy = (value) => {
+  if (value){
+    return true;
+  } else{
+    return false;
+  }
+}
+*/
+console.log(truthyOrFalsy(0)); // Should print false
+console.log(truthyOrFalsy('Hello!')); // Should print true
