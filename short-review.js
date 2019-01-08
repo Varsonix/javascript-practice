@@ -52,7 +52,7 @@ const lifePhase = (age) => {
 console.log(lifePhase(5); // Should print 'Child'
             
 /*
-Exercise 3: 
+Exercise 4: 
 Create a function that takes 3 arguments (grades) 
 Checks for validity, averages them, and then returns a grade based on the average within a range. 
 */
@@ -82,3 +82,18 @@ const finalGrade = (grade1, grade2, grade3) => {
  }
 }
  console.log(finalGrade(99, 92, 95)); // Should print 'A'
+
+/*
+Exercise 5: Create a function that takes two parameters (rank, last name) and return a string using both of those parameters
+*/
+
+const reportingForDuty = (rank, lastName) => {
+  return `${rank} ${lastName} reporting for duty!`;
+}
+/* Consice body method ES6
+
+const reportingForDuty = (rank, lastName) => `${rank} ${lastName} reporting for duty!`;
+
+*/
+
+console.log(reportingForDuty('Private', 'Fido')); // Prints "Private Fido reporting for duty!'
