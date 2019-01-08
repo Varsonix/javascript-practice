@@ -74,5 +74,5 @@ if (randomNumber === 0){
 }
 
 */
-
+ 
 console.log(`The eight ball answered: ${eightBall}`);
