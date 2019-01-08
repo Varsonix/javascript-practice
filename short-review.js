@@ -1,8 +1,6 @@
 /*
-
 Exercise 1: Create a function to check whether a person is of legal voting age (18 in this example).
             return true or false.
-
 */
 
 const canIVote = (age) => {
@@ -16,9 +14,7 @@ const canIVote = (age) => {
 console.log(canIVote(19));
 
 /*
-
 Exercise 2: Create a function to test whether two strings are the same, and if so return "You agree!" or "You disagree!"
-
 */
 
 const agreeOrDisagree = (string1, string2) => {
@@ -32,9 +28,7 @@ const agreeOrDisagree = (string1, string2) => {
 console.log(agreeOrDisagree('yes', 'yes'));
 
 /*
-
 Exercise 3: Create a function that takes your age and returns a classification based on your age range (e.g: 0-3 = baby / 4-12 = child)
-
 */
 
 const lifePhase = (age) => {
@@ -58,11 +52,9 @@ const lifePhase = (age) => {
 console.log(lifePhase(5); // Should print 'Child'
             
 /*
-
 Exercise 3: 
 Create a function that takes 3 arguments (grades) 
 Checks for validity, averages them, and then returns a grade based on the average within a range. 
-
 */
 
 const finalGrade = (grade1, grade2, grade3) => {
