@@ -3,12 +3,15 @@ This project was to further drive home control flow and multiple conditionals fo
 We also use operator assignments here as well as more string interpolation. 
 */
 
+// Our randomizer to create a number between 1-1000
 let raceNumber = Math.floor(Math.random() * 1000);
 
+// These variables are meant to be changed at this location for testing of the control flow
 const racerEarly = false;
 const runnerAge = 18;
 
-if (runnerAge > 18 && racerEarly === true){
+// This block is to ensure that racers who are adults (>18) AND early (racerEarly = true) are given a number above 1000.
+if (runnerAge > 18 && racerEarly){
   raceNumber += 1000;
 }
 
