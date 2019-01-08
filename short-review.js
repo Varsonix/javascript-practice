@@ -97,3 +97,56 @@ const reportingForDuty = (rank, lastName) => `${rank} ${lastName} reporting for 
 */
 
 console.log(reportingForDuty('Private', 'Fido')); // Prints "Private Fido reporting for duty!'
+
+
+/*---------
+
+Exercise 7: Create a function with two parameters (weight, planet) that will calculate the weight of an object on a different planet.
+
+*/
+
+// Write your function here:
+const calculateWeight = (earthWeight, planet) => {
+  // Validate these are going to be a number and a string respectively.
+  if ((typeof planet !== "string") || (typeof earthWeight !== "number")){
+    return 'Invalid Planet Entry. Try: Mercury, Venus, Mars, Jupiter, or Saturn.';
+  }
+ 
+  
+
+  // Begin if statements
+  if (planet === 'Mercury'){
+    return earthWeight * 0.378;
+  } else if (planet === 'Venus'){
+    return earthWeight * 0.907;
+  }	else if (planet === 'Mars'){
+    return earthWeight * 0.377;
+  }	else if (planet === 'Jupiter'){
+    return earthWeight * 2.36;
+  }	else if (planet === 'Saturn'){
+    return earthWeight * 0.916;
+  }	else{
+    return 'Invalid Planet Entry. Try: Mercury, Venus, Mars, Jupiter, or Saturn.';
+  }
+}
+
+// Using switch method instead of if/else 
+/*
+	switch (planet) {
+	  case 'Mercury':
+ 	   return earthWeight * 0.378;
+ 	 case 'Venus':
+ 	   return earthWeight * 0.907;
+	 case 'Mars':
+  	  return earthWeight * 0.377;
+	 case 'Jupiter':
+ 	   return earthWeight * 2.36;
+	 case 'Saturn':
+ 	   return earthWeight * 0.916;
+	 default:
+ 	   return 'Invalid Planet Entry. Try: Mercury, Venus, Mars, Jupiter, or	Saturn.';
+	}
+       }
+*/
+console.log(calculateWeight(100, 'Jupiter')) // Should print 236
+
