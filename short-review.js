@@ -56,3 +56,37 @@ const lifePhase = (age) => {
 }
 
 console.log(lifePhase(5); // Should print 'Child'
+            
+/*
+
+Exercise 3: 
+Create a function that takes 3 arguments (grades) 
+Checks for validity, averages them, and then returns a grade based on the average within a range. 
+
+*/
+
+const finalGrade = (grade1, grade2, grade3) => {
+  // Check grades first for validity.
+  // Makes sure none of the grades are above 100 or below 0.
+  if ((grade1 < 0 || grade1 > 100) || (grade2 < 0 || grade2 > 100) || (grade3 < 0 || grade3 > 100)) {
+    return 'You have entered an invalid grade.';
+  }
+  
+  // Calculate the average grade now that we know the grades are valid.
+  const average = (grade1 + grade2 + grade3) / 3;
+  
+  // Return a grade string based upon range that the average falls in.
+  // 0-59 = F | 60-69 = D | 70-79 = C | 80-89 = B | 90-100 = A
+ if (average >= 0 && average <= 59){
+   return 'F';
+ }	else if (average >= 60 && average <= 69){
+   return 'D';
+ } 	else if (average >= 70 && average <= 79){
+   return 'C';
+ }	else if (average >= 80 && average <= 89){
+   return 'B';
+ }	else if (average >= 90 && average <= 100){
+   return 'A';
+ }
+}
+ console.log(finalGrade(99, 92, 95)); // Should print 'A'
