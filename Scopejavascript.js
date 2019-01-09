@@ -40,3 +40,20 @@ const logVisibleLightWaves = () => {
 logVisibleLightWaves(); // Moonlight
 // If we try to log just the local variable, we will get an error.
 console.log(lightWaves); // ReferenceError
+
+
+/*
+Here we set an example of scope pollution by defining stars as 'North Star', but re-assigining it to 'Sirius' in the function.
+This changes the variable globally however, so it is no longer 'North Star'.
+*/
+const satellite = 'The Moon';
+const galaxy = 'The Milky Way';
+let stars = 'North Star';
+
+const callMyNightSky = () => {
+  stars = 'Sirius' // Take note of this.
+	return 'Night Sky: ' + satellite + ', ' + stars + ', ' + galaxy;
+};
+
+console.log(callMyNightSky());
+console.log(stars);
