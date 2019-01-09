@@ -12,3 +12,7 @@ const listItem = famousSayings[0];
 console.log(listItem);
 console.log(famousSayings[2]); // logs the 3rd item from the famousSayings array.
 console.log(famousSayings[3]); // Logs undefined because there is no item in the 4th slot.
+
+let groceryList = ['bread', 'tomatoes', 'milk'];
+// Re-assigning the value in a specific spot in an array.
+groceryList[1] = 'avocados';
