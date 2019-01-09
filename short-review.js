@@ -105,7 +105,6 @@ Exercise 7: Create a function with two parameters (weight, planet) that will cal
 
 */
 
-// Write your function here:
 const calculateWeight = (earthWeight, planet) => {
   // Validate these are going to be a number and a string respectively.
   if ((typeof planet !== "string") || (typeof earthWeight !== "number")){
@@ -192,7 +191,7 @@ var numImaginaryFriends = function(friends) {
   return finalNumber;
 }*/
 
-// Uncomment the line below when you're ready to try out your function
+
 console.log(numImaginaryFriends(18)) // Should print 6
 
 /*
@@ -217,3 +216,55 @@ var sillySentence = function(adj, verb, noun) {
   return 'I am so ' + word1 + ' because I ' + word2 + ' coding! Time to write some more awesome ' + word3 +'!';
 } */
 console.log(sillySentence('excited', 'love', 'functions')) 
+
+/*
+
+Exercise 15: 
+Create a function that takes a string.
+Use a switch/case to do this.
+
+*/
+
+const toEmoticon = (string1) => {
+  switch (string1){
+    case 'shrug':
+      return '|_{"}_|';
+    case 'smiley face':
+      return ':)';
+    case 'frowny face':
+      return ':(';
+    case 'winky face':
+      return ';)';
+    case 'heart':
+      return '<3';
+    default:
+      return '|_(* ~ *)_|';
+  }
+}
+
+/* if/else if method
+
+const toEmoticon = (string1) => {
+  if (string1 === 'shrug'){
+    return '|_{"}_|';
+  } else if (string1 === 'smiley face'){
+    return ':)';
+  }	else if (string1 === 'frowny face'){
+    return ':(';
+  }	else if (string1 === 'winky face'){
+    return ';)';
+  }	else if (string1 === 'heart'){
+    return '<3';
+  }	else {
+    return '|_(* ~ *)_|';
+  }
+}
+*/
+
+console.log(toEmoticon("whatever")) 
+console.log(toEmoticon("shrug"));
+console.log(toEmoticon('smiley face'));
+console.log(toEmoticon('frowny face'));
+console.log(toEmoticon('winky face'));
+console.log(toEmoticon('heart'));
+
