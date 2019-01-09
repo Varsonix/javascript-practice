@@ -43,3 +43,19 @@ const chores = ['wash dishes', 'do laundry', 'take out trash', 'cook dinner', 'm
 // Using .pop() to remove the last element from an array.
 chores.pop();
 console.log(chores);
+
+const groceryList = ['orange juice', 'bananas', 'coffee beans', 'brown rice', 'pasta', 'coconut oil', 'plantains'];
+
+//Using shift to remove the FIRST element in an array.
+groceryList.shift();
+console.log(groceryList);
+
+//using unshift to add an element to the beginning of an array.
+groceryList.unshift('popcorn');
+console.log(groceryList);
+//Using .sclice() to display only the range between 1 and 4.
+console.log(groceryList.slice(1, 4));
+console.log(groceryList);
+// Saving the index of 'pasta' to a variable and logging it.
+const pastaIndex = groceryList.indexOf('pasta');
+console.log(pastaIndex);
