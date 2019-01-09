@@ -16,3 +16,15 @@ console.log(famousSayings[3]); // Logs undefined because there is no item in the
 let groceryList = ['bread', 'tomatoes', 'milk'];
 // Re-assigning the value in a specific spot in an array.
 groceryList[1] = 'avocados';
+
+// Re-defining more arrays
+let condiments = ['Ketchup', 'Mustard', 'Soy Sauce', 'Sriracha'];
+condiments[0] = 'Mayo';
+const utensils = ['Fork', 'Knife', 'Chopsticks', 'Spork'];
+console.log(condiments);
+
+condiments = ['Mayo'];
+console.log(condiments);
+
+utensils[3] = 'Spoon';
+console.log(utensils);
