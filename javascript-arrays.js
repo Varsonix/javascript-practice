@@ -32,3 +32,9 @@ console.log(utensils);
 const objectives = ['Learn a new languages', 'Read 52 books', 'Run a marathon'];
 // Logging the length of the array.
 console.log(objectives.length);
+
+const chores = ['wash dishes', 'do laundry', 'take out trash'];
+// Using .push() to add elements to an array
+chores.push('eat breakfast', 'play games');
+
+console.log(chores);
