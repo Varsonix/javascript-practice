@@ -80,3 +80,28 @@ console.log(concept);
 const numberClusters = [[1, 2], [3, 4], [5, 6]];
 
 const target = numberClusters[2][1];
+
+// our secret message array which we will be modifying
+let secretMessage = ['Learning', 'is', 'not', 'about', 'what', 'you', 'get', 'easily', 'the', 'first', 'time,', 'it', 'is', 'about', 'what', 'you', 'can', 'figure', 'out.', '-2015,', 'Chris', 'Pine,', 'Learn', 'JavaScript'];
+
+// This will remove the last entry of the array.
+secretMessage.pop();
+
+// This will add 'to' and 'Program' into the array at the end.
+secretMessage.push('to', 'Program');
+
+// This will replace 'easily' in the array to 'right'.
+// You could also do this with secretMessage[7] = 'right'.
+secretMessage[secretMessage.indexOf('easily')] = 'right';
+
+// This will remove an entry at the beginning of the array.
+secretMessage.shift();
+
+// This will add an antry at the beginning of the array.
+secretMessage.unshift('Programming');
+
+// This will take indexes 6,7,8,9,10 and replace them all with a single entry. 'know'.
+secretMessage.splice(6, 5, 'know,');
+
+// This will join all the array strings together, linked via a space ' '.
+console.log(secretMessage.join(' '));
