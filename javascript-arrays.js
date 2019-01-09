@@ -38,3 +38,8 @@ const chores = ['wash dishes', 'do laundry', 'take out trash'];
 chores.push('eat breakfast', 'play games');
 
 console.log(chores);
+
+const chores = ['wash dishes', 'do laundry', 'take out trash', 'cook dinner', 'mop floor'];
+// Using .pop() to remove the last element from an array.
+chores.pop();
+console.log(chores);
