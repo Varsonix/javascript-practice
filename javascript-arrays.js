@@ -59,3 +59,19 @@ console.log(groceryList);
 // Saving the index of 'pasta' to a variable and logging it.
 const pastaIndex = groceryList.indexOf('pasta');
 console.log(pastaIndex);
+
+// Editing arrays through functions.
+const concept = ['arrays', 'can', 'be', 'mutated'];
+
+function changeArr(arr){
+  arr[3] = 'MUTATED';
+}
+
+changeArr(concept);
+console.log(concept);
+
+function removeElement(newArr){
+  newArr.pop();
+}
+removeElement(concept);
+console.log(concept);
