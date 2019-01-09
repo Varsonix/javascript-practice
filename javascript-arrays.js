@@ -28,3 +28,7 @@ console.log(condiments);
 
 utensils[3] = 'Spoon';
 console.log(utensils);
+
+const objectives = ['Learn a new languages', 'Read 52 books', 'Run a marathon'];
+// Logging the length of the array.
+console.log(objectives.length);
