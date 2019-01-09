@@ -29,3 +29,14 @@ When we call this function, it will be able to use the three variables
 used inside of it, becuase they are global variables, and are available to all lines of code.
 */
 console.log(callMyNightSky());
+
+// Creating a function
+const logVisibleLightWaves = () => {
+  // Defining a LOCAL variable within this block of code. This is NOT global.
+  const lightWaves = 'Moonlight';
+  console.log(lightWaves);
+}
+// When we call the function, it will display the variable
+logVisibleLightWaves(); // Moonlight
+// If we try to log just the local variable, we will get an error.
+console.log(lightWaves); // ReferenceError
