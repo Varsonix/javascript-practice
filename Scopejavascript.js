@@ -57,3 +57,21 @@ const callMyNightSky = () => {
 
 console.log(callMyNightSky());
 console.log(stars);
+
+/*
+Here we take a practice session in tightly scoping variables.
+We define 2 variables within the function, and further-more, when we create an if statement. We re-define the variable within that
+code block. Which will not change the variable outside the block so if it is called from the function level, it will remain the same.
+*/
+const logVisibleLightWaves = () => {
+  let lightWaves = 'Moonlight';
+	let region = 'The Arctic';
+  if (region === 'The Arctic'){
+    let lightWaves = 'Northern Lights';
+    console.log(lightWaves);
+  }
+  
+  console.log(lightWaves);
+};
+
+logVisibleLightWaves();
