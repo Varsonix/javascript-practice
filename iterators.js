@@ -63,3 +63,39 @@ const smallNumbers = bigNumbers.map(function(el){
 
 console.log(bigNumbers);
 console.log(smallNumbers);
+
+/*
+This lesson goes over .filter() as a method to iterate through an array and help filter out certain conditions.
+such as remove numbers which are < 10.
+*/
+const randomNumbers = [375, 200, 3.14, 7, 13, 852];
+
+/* --- Ultra Concise Notation ---
+const smallNumbers = randomNumbers.filter(number => number < 250);
+*/
+
+/* --- Standard Arrow ---
+const smallNumbers = randomNumbers.filter(number => {
+  return number < 250;
+});
+*/
+// Function notation. We only showcase numbers which are less than 250.
+const smallNumbers = randomNumbers.filter(function(number){
+  return number < 250;
+});
+
+const favoriteWords = ['nostalgia', 'hyperbole', 'fervent', 'esoteric', 'serene'];
+
+/* --- Ultra Concise Notation ---
+const longFavoriteWords = favoriteWords.filter(word => word.length > 7);
+*/
+/* --- Standard Arrow Notation ---
+const longFavoriteWords = favoriteWords.filter(word => {
+  return word.length > 7;
+});
+*/
+// Function notation. We only showcase words which are longer than 7 characters.
+const longFavoriteWords = favoriteWords.filter(function(word){
+  return word.length > 7;
+});
+
