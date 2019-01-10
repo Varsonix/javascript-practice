@@ -51,3 +51,14 @@ while (currentCard !== 'spade') {
   currentCard = cards[Math.floor(Math.random() * 4)];
   console.log(currentCard);
 }
+
+// an instance of a Do...While loop. This snippet intends to make sure we at least increment cupsAdded by 1 at least ONCE
+// and then follow the while comparison (cupsAdded < cupsOfSugarNeeded). If you change the conditional in while to false, we should still
+// see cupsAdded = 1 when logged to the console.
+const cupsOfSugarNeeded = 3;
+let cupsAdded = 0;
+
+do {
+  cupsAdded++
+  console.log(cupsAdded);
+} while (cupsAdded < cupsOfSugarNeeded);
