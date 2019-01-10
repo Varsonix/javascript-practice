@@ -167,3 +167,33 @@ const interestingWords = words.filter((w) =>{
 console.log(interestingWords.every((word) => { 
 	return word.length > 5;
 } ));
+
+
+// defining callback function before using it in an iterator
+function filterWords(word){
+  return word.length > 5; 
+};
+// The array.
+const wordsThatTest = ['Potato', 'salad', 'applesauce'];
+// calling the function I made.
+const longWords = wordsThatTest.filter(filterWords);
+
+console.log(longWords);
+
+// Chaining array methods.
+const arr = [1, 2, 3];
+// This will make a new array that doesn't have 2. [1, 3]
+const smallerArr = arr.filter(n => n !== 2);
+// This will add 1 to each number in the array. [2, 4]
+const incrementedArr = smallerArr.map(n => n + 1);
+
+console.log(incrementedArr); // [2, 4]
+
+const nestedArr = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
+let newArr = nestedArr.reduce((acc, cVal) => {
+  return acc.concat(cVal);
+});
+
+console.log(newArr);
+
+
