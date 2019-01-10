@@ -22,3 +22,44 @@ function printFruit(i){
 }
 
 fruits.forEach(printFruit);
+
+/*
+
+This exercise goes over how to use the .map() iterator.
+
+*/
+
+const animals = ['Hen', 'elephant', 'llama', 'leopard', 'ostrich', 'Whale', 'octopus', 'rabbit', 'lion', 'dog'];
+
+/* Using ultra-concise arrow notation.
+const secretMessage = animals.map(j => j[0]);
+
+//  Using standard arrow notation.
+const secretMessage = animals.map(i => {
+  return i[0];
+});*/
+
+// Using function notation.
+const secretMessage = animals.map(function(element){
+  return element[0];
+})
+
+console.log(secretMessage.join(''));
+
+const bigNumbers = [100, 200, 300, 400, 500];
+
+/* ultra-concise arrow notation.
+const smallNumbers = bigNumbers.map(el => el / 100);
+
+// standard arrow notation.
+const smallNumbers = bigNumbers.map(el => {
+  return el / 100;
+});*/
+
+// function notation.
+const smallNumbers = bigNumbers.map(function(el){
+  return el / 100;
+});
+
+console.log(bigNumbers);
+console.log(smallNumbers);
