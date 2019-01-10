@@ -6,6 +6,7 @@ let fasterShip = {
 
 /*
 Assigning properites of an object to variables.
+Utilizing dot notation to access the properties.
 */
 let spaceship = {
   homePlanet: 'Earth',
