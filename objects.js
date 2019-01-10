@@ -184,3 +184,23 @@ const robot = {
 };
 // Logging the results of calling robot.provideInfo().
 console.log(robot.provideInfo());
+
+/*
+Using getters in js. here we have an _energyLevel: 100, and a get energyLevel ().
+This will check if this._energyLevel is a number or not.
+if it's a number. display that formatted.
+*/
+const robot = {
+  _model: '1E78V2',
+  _energyLevel: 100,
+  get energyLevel (){
+    if (typeof this._energyLevel === 'number'){
+      return 'My current energy level is ' + this._energyLevel;
+    }
+    else {
+      return 'System malfunction: cannot retrieve energy level';
+    }
+  }
+};
+// Calling our getter.
+console.log(robot.energyLevel);
