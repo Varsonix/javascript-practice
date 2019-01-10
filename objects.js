@@ -167,3 +167,20 @@ for (let crewMember in spaceship.crew) {
 for (let crewMember in spaceship.crew) {
   console.log(`${spaceship.crew[crewMember].name}: ${spaceship.crew[crewMember].degree}`);
 }
+
+/*
+Understanding 'this'.
+Here, we create an object called robot, and assign it two properties and a method.
+If i were to try to call the properties by themselves within the method. I would get an error.
+this.property will help to referrence the calling object.
+*/
+const robot = {
+  model: '1E78V2',
+  energyLevel: 100,
+  provideInfo() {
+    // this.model will tell the method I am calling 'robot.model' and 'robot.energyLevel'.
+    return `I am ${this.model} and my current energy level is ${this.energyLevel}.`;
+  }
+};
+// Logging the results of calling robot.provideInfo().
+console.log(robot.provideInfo());
