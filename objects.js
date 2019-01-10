@@ -204,3 +204,33 @@ const robot = {
 };
 // Calling our getter.
 console.log(robot.energyLevel);
+
+/*
+Practicing getter and setter methods. We set a get and set of numOfSensors to get and or set the number of sensors (_numOfSensors)
+when we use the methods. they check conditionals and execute blocks of code based on those conditionals.
+*/
+const robot = {
+  _model: '1E78V2',
+  _energyLevel: 100,
+  _numOfSensors: 15,
+  get numOfSensors(){
+    if(typeof this._numOfSensors === 'number'){
+      return this._numOfSensors;
+    } else {
+      return 'Sensors are currently down.'
+    }
+  },
+  set numOfSensors(num) {
+    if (typeof num === 'number' && num >= 0){
+      this._numOfSensors = num;
+    }	else {
+      console.log('Pass in a number that is greater than or equal to 0');
+    }
+  }  
+};
+// Using the setter in action to set _numOfSensors to 100.
+robot.numOfSensors = 100;
+// Using the getter to see what _numOfSensors is now.
+console.log(robot.numOfSensors);
+// Double checking by looking directly at _numOfSensors.
+console.log(robot._numOfSensors);
