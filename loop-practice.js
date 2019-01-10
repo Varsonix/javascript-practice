@@ -80,3 +80,31 @@ for (let i=0; i<rapperArray.length; i++){
   }
 }
 console.log(`And if you don't know, now you know.`);
+
+/*
+More iteration practice and random coding
+*/
+let groceryList = ['orange juice', 'bananas', 'coffee beans', 'brown rice', 'pasta', 'coconut oil', 'plantains'];
+
+// Basic iteration through the array using for
+for (let i = 0; i < groceryList.length; i++){
+  console.log(groceryList[i]); 
+}
+
+// Basic iteration through the array using while
+let indexTest = 0;
+  
+while (indexTest < groceryList.length){
+  console.log(groceryList[indexTest]);
+  indexTest++;
+}
+
+// I tried to make a do / while loop that would continously change indexValue to the randomly generated index of groceryList
+// until indexValue was 'bananas'. Then it would break.
+let indexExtra = 0;
+let indexValue;
+
+do {
+  indexValue = groceryList[Math.floor(Math.random() * 6)];
+  console.log(indexValue);
+}	while (indexValue !== 'bananas');
