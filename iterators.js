@@ -2,6 +2,9 @@
 This file covers my iterator lessons through javascript. Enjoy.
 */
 
+/*
+First lesson goes over .forEach()
+*/
 const fruits = ['mango', 'papaya', 'pineapple', 'apple'];
 
 // Extremely concise arrow function method. Not a fan, but it works.
