@@ -143,3 +143,27 @@ const newSum = newNumbers.reduce(function(accumulator, currentValue) {
 }, 10);
 
 console.log(newSum);
+
+/*
+This final recap uses some new array.methods.
+.some() and .every()
+*/
+
+const words = ['unique', 'uncanny', 'pique', 'oxymoron', 'guise'];
+
+
+// This will check if anything in the array has less than 6 characters.
+console.log(words.some((word) => {
+  return word.length < 6;
+}));
+
+// This will filter the words array and add only words with more than 5 characters into interestingWords (new array)
+const interestingWords = words.filter((w) =>{
+  return w.length > 5;
+});
+
+
+// This will test if all elements in the array pass the given test in the return.
+console.log(interestingWords.every((word) => { 
+	return word.length > 5;
+} ));
