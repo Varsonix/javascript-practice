@@ -18,3 +18,19 @@ let spaceship = {
 
 const crewCount = spaceship.numCrew;
 const planetArray = spaceship.flightPath;
+
+/*
+Assigning properties of an object to variables.
+Utilizing bracket notation to access the properties.
+*/
+let spaceship = {
+  'Fuel Type' : 'Turbo Fuel',
+  'Active Mission' : true,
+  homePlanet : 'Earth', 
+  numCrew: 5
+ };
+
+let propName =  'Active Mission';
+
+const isActive = spaceship['Active Mission'];
+console.log(spaceship['Active Mission']);
