@@ -49,7 +49,7 @@ for (let i=0; i < betterWords.length; i++){
   }
 }
 */
-
+ 
 // This section iterates through betterWords and looks for periods and exclamation points. It looks through
 // the last index (word.length - 1) of each word and checks if it's a '.' or '!'. if so, +1 to sentences.
 let sentences = 0;
