@@ -48,3 +48,21 @@ let spaceship = {
 spaceship['color'] = 'glorious gold';
 spaceship.numEngines = 8;
 delete spaceship['Secret Mission'];
+
+/*
+Utilizing methods (functions within objects) and invoking them.
+*/
+
+let retreatMessage = 'We no longer wish to conquer your planet. It is full of dogs, which we do not care for.';
+
+let alienShip = {
+  retreat: function(){
+    console.log(retreatMessage);
+  }, // don't forget the comma, super important for seperating property/values.
+  takeOff: function(){
+    console.log(`Spim... Borp... Glix... Blastoff!`);
+  } // except for the last one in an object.
+};
+// Invoking methods objectName.method(args);
+alienShip.retreat();
+alienShip.takeOff();
