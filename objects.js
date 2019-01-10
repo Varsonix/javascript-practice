@@ -334,3 +334,59 @@ console.log(robotEntries);
 // Declare newRobot below this line:
 const newRobot = Object.assign({laserBlaster: true, voiceRecognition: true}, robot);
 console.log(newRobot);
+
+// Random challenges applied to myself.
+// Find the value of this within a function of an object.
+const object1 = {
+  name: 'Jordan',
+  styleName: function() {
+    console.log(this);
+  }
+}
+
+object1.styleName();
+
+// Find the outcome of using a property with the exact same name as a getter or setter.
+const robot = {
+  _model: '1E78V2',
+  _energyLevel: 100,
+  numOfSensors: 15, // this was originally _numOfSensors (as well as inside all the methods)
+  get numOfSensors(){
+    if(typeof this.numOfSensors === 'number'){
+      return this.numOfSensors;
+    } else {
+      return 'Sensors are currently down.'
+    }
+  },
+  set numOfSensors(num) {
+    if (typeof num === 'number' && num >= 0){
+      this.numOfSensors = num;
+    }	else {
+      console.log('Pass in a number that is greater than or equal to 0');
+    }
+  }  
+};
+
+robot.numOfSensors = 100; // Maximum call stack size exceeded.
+
+
+console.log(object2.nameIs('Jordan')) // 
+console.log(object2.nameIs);
+
+// Use a factory function to create an object of my choosing. 
+const objectFactory = (name, age, height, weight, hairColor) => {
+  return {
+    name,
+    age,
+    height,
+    weight,
+    hairColor,
+    greet: function(){
+      console.log(`Hi! My name is ${this.name}`);
+    }
+  }
+}
+
+const jordanGibbard = objectFactory('Jordan', 29, 116, 230, 'Brown'); // No matter what, this will always add the greet: function.
+console.log(Object.entries(jordanGibbard));
+jordanGibbard.greet();
