@@ -62,3 +62,21 @@ do {
   cupsAdded++
   console.log(cupsAdded);
 } while (cupsAdded < cupsOfSugarNeeded);
+
+
+/*
+This section goes over using break within a for loop. Here, we have an array of rappers. We create a for loop to iterate through this
+array. But each time the array is iterated, it checks to see if the current value of the array's index is 'Notorious B.I.G.'. If this
+condiontial comes back true, we break the code. So it should stop logging each index once it logs Notorious B.I.G.
+*/
+const rapperArray = ["Lil' Kim", "Jay-Z", "Notorious B.I.G.", "Tupac"];
+
+// Begin for loop to iterate through array.
+for (let i=0; i<rapperArray.length; i++){
+  console.log(rapperArray[i]);
+  // Here is where we check for the index and break if true.
+  if (rapperArray[i] === 'Notorious B.I.G.'){
+    break;
+  }
+}
+console.log(`And if you don't know, now you know.`);
