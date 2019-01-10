@@ -234,3 +234,50 @@ robot.numOfSensors = 100;
 console.log(robot.numOfSensors);
 // Double checking by looking directly at _numOfSensors.
 console.log(robot._numOfSensors);
+
+/*
+Here, we are learning about creating a function that returns objects and utilizes the parameters given to help supply the data.
+we take a model and mobile (boolean) to create an object (that we name later with const) and assign it's model and mobile funcitonality.
+
+*/
+// Using function notation.
+function robotFactory(model, mobile) {
+  return {
+    model: model,
+    mobile: mobile,
+    // creating a method to log something.
+    beep: function(){
+      console.log('Beep Boop');
+    }
+  }
+}
+
+// Using short-hand
+/*const robotFactory = (model, mobile) => {
+  return {
+    model: model,
+    mobile: mobile,
+    beep(){
+      console.log('Beep Boop');
+    }
+  }
+}*/
+// Using our new function in action!
+const tinCan = robotFactory('P-500', true);
+tinCan.beep();
+
+// If the key is the same name as the parameter, we can use
+// property value shorthand
+const robotFactory = (model, mobile) => {
+  return {
+    model,
+    mobile,
+    beep() {
+      console.log('Beep Boop');
+    }
+  }
+}
+// To check that the property value shorthand technique worked:
+const newRobot = robotFactory('P-501', false)
+console.log(newRobot.model)
+console.log(newRobot.mobile)
