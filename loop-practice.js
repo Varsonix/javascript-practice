@@ -108,3 +108,42 @@ do {
   indexValue = groceryList[Math.floor(Math.random() * 6)];
   console.log(indexValue);
 }	while (indexValue !== 'bananas');
+
+
+/*
+Whale talk exercise: Take a phrase like 'turpentine and turtles' and translate it into its "whale talk" equivalent: 'UUEEIEEAUUEE'.
+
+There are no consonants. Only vowels excluding "y".
+The u's and e's are extra long, so we must double them in our program.
+
+Once we have converted text to the whale language, the result is sung slowly, as is a custom in the ocean.
+*/
+let input = 'turpentine and turtles';
+let vowels = ['a', 'e', 'i', 'o', 'u'];
+let resultArray = [];
+
+// For loop iteration into nested for loop to compare same items. (vowels)
+for (let l = 0; l < input.length; l++){
+  /*
+  These two if statements are for the "double the e and u" portion.
+  basically it checks once by itself whether it is an e or u, and if so.
+  pushes it once. (once the nested for loop checks, it will push it the second time for us.)
+  */
+  if (input[l] === 'e'){
+    resultArray.push(input[l]);
+  }
+  if (input[l] === 'u'){
+    resultArray.push(input[l]);
+  }
+  // What we're trying to convey, is for every time you hit a letter 
+  // In input, check the entire vowels array and see if any of them match.
+  for (let i = 0; i < vowels.length; i++){
+    if (input[l] === vowels[i]){
+      // Should we have a match, .push() the letter from input's index into resultArray.
+      resultArray.push(input[l]);
+    }
+  }
+}
+// Finally, we log the array aftewards and join them with no space and uppercase everything.
+console.log(resultArray.join('').toUpperCase());
+// should print 'UUEEIEEAUUEE'
