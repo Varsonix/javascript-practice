@@ -281,3 +281,29 @@ const robotFactory = (model, mobile) => {
 const newRobot = robotFactory('P-501', false)
 console.log(newRobot.model)
 console.log(newRobot.mobile)
+
+/*
+Here we go over using short-hand to extract values from objects.
+*/
+const robot = {
+  model: '1E78V2',
+  energyLevel: 100,
+  functionality: {
+    beep() {
+      console.log('Beep Boop');
+    },
+    fireLaser() {
+      console.log('Pew Pew');
+    },
+  }
+};
+// How we would have normally done this before short-hand.
+/*
+const functionality = robot.functionality;
+functionality.beep();
+*/
+
+// You can think of functionality here as the object that was pulled
+// out of robot.functionality. 
+const { functionality } = robot;
+functionality.beep();
