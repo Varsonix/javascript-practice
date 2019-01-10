@@ -307,3 +307,30 @@ functionality.beep();
 // out of robot.functionality. 
 const { functionality } = robot;
 functionality.beep();
+
+/*
+Using built-in object methods such as Object.keys() to get all the property names.
+Object.entries(); to get all the properties and values as an array.
+Object.assign(target, source); to copy the source object keys into the target object (with additional choices if you fill in the tar)
+*/
+const robot = {
+	model: 'SAL-1000',
+  mobile: true,
+  sentient: false,
+  armor: 'Steel-plated',
+  energyLevel: 75
+};
+
+// What is missing in the following method call?
+const robotKeys = Object.keys(robot);
+
+console.log(robotKeys);
+
+// Declare robotEntries below this line:
+const robotEntries = Object.entries(robot);
+
+console.log(robotEntries);
+
+// Declare newRobot below this line:
+const newRobot = Object.assign({laserBlaster: true, voiceRecognition: true}, robot);
+console.log(newRobot);
